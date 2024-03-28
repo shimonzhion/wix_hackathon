@@ -22,7 +22,7 @@ function ChartsJs() {
   });
 
   const areaCounts = {};
-  chartLocation.forEach((area) => {
+  chartLocation?.forEach((area) => {
     if (!areaCounts[area]) {
       areaCounts[area] = 0;
     }
