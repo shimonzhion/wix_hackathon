@@ -146,7 +146,7 @@ export default function SideBar() {
               </div>
           </Typography>
           <Button variant="contained" onClick={()=>navigate('/signIn')} >login</Button>
-          <Button variant="contained" onClick={()=>navigate('/signUp')}>register</Button>
+          <Button variant="contained" onClick={()=>navigate('/signUp')}>signUp</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} >
