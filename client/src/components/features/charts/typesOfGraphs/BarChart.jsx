@@ -1,6 +1,5 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import sourceData from "../data/sourceData.json";
 import { useContext } from 'react';
 import { graduatesContext } from "../../../../contexts/graduates";
 
@@ -14,12 +13,12 @@ function BarChart() {
   const notEmployed = graduates?.filter(item => item.employmentStatus == 'notEmployed').length;
   const inProcess = graduates?.filter(item => item.employmentStatus == 'inProcess').length;
   const data = [inEmployment, notEmployed, inProcess];
-
+  const employeeData = ["In Employment", "Not Employed", "In Process"]
   return (
     < >
       <Bar
         data={{
-          labels: sourceData?.map((data) => data.label),
+          labels: employeeData?.map((data) => data),
           datasets: [
             {
               label: "Employment",
