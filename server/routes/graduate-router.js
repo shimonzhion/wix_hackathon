@@ -1,4 +1,5 @@
 const graduateRouter = require('express').Router()
+
 const {getGraduates, getGraduatesById, updateGraduate, deleteGraduate,graduateRegister,graduateLogin} = require('../controllers/graduate-ctrl');
 const {authToken,checkUserType}= require('../middleware/auth-middleware')
 

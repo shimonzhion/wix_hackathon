@@ -2,6 +2,7 @@ const CoordinatorModel = require("../models/coordinator-model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const { getAll, deleteOne,updateOne } = require("./main");
+const { validateCordiantor } = require('../validation/coordinator-valid');
 
 const getCoordinators = async (req, res) => {
   getAll(req, res, CoordinatorModel);
@@ -28,11 +29,12 @@ const generateToken = (id) => {
 };
 const register = async (req, res) => {
   const {firstName,lastName,email,password,phone,classOf,employeeNumber ,userType} = req.body;
+  const { error } = validateCordiantor(req.body);
+  if (error) {
+      return res.status(400).json({ message: error.details[0].message , success:false });
+  } 
   try {
-    if (!firstName ||!lastName ||!email ||!password ||!phone ||!classOf ||!employeeNumber) {
-      res.status(400).json({ message: "Please fill all the fields" });
-      return;
-    }
+
     //Check if coordinator exists
     const coordinatorExists = await CoordinatorModel.findOne({ email });
     if (coordinatorExists) {

@@ -9,8 +9,7 @@ const coordinatorJoiSchema = Joi.object({
     phone: Joi.string().required(),
     password: passwordComplexity().required(),
     image: Joi.string().optional(),
-    employeeNumber: Joi.string()
-      .valid("Job seeker","Employed","Retired","Student","Unemployed","Other").default("Job seeker"),
+    employeeNumber: Joi.string(),
     isEmployed: Joi.boolean().optional(),
     classOf: Joi.string().required(),
   });
