@@ -5,6 +5,7 @@ const passwordComplexity = require("joi-password-complexity");
 const graduateJoiSchema = Joi.object({
     firstName: Joi.string().required(),
     lastName: Joi.string().required(),
+    gender: Joi.string().required(),
     email: Joi.string().email().required(),
     phone: Joi.string().required(),
     password: passwordComplexity().required(),
@@ -19,7 +20,7 @@ const graduateJoiSchema = Joi.object({
     CV: Joi.string().optional(),
     image: Joi.string().optional(),
     employmentStatus: Joi.string()
-      .valid("Job seeker","Employed","Retired","Student","Unemployed","Other").default("Job seeker"),
+      .valid("Unemployed","Employed","In process").default("Unemployed"),
     isEmployed: Joi.boolean().optional(),
     classOf: Joi.string().required(),
   });

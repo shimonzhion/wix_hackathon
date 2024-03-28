@@ -1,18 +1,19 @@
 const mongoose = require("mongoose");
 const graduateScema = new mongoose.Schema(
   {
-     firstName: String,
+    firstName: String,
     lastName: String,
+    gender:String,
     email: String,
     phone: String,
     password: String,
     birthdate: Date,
-    address: {city: String ,street: String ,district: String,},
+    address: {city: String ,street: String ,district: String},
     isActive: Boolean,
     service: String,
     CV: String,
     image: String,
-    employmentStatus: {type: String, enum: ["Job seeker","Employed","Retired","Student","Unemployed","Other",],default: "Job seeker",},
+    employmentStatus: {type: String, enum: ["Unemployed","Employed","In process"],default: "Unemployed"},
     isEmployed: Boolean,
     classOf: {type: mongoose.Types.ObjectId,ref: "ClassOf",},
   },

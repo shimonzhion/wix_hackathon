@@ -1,14 +1,13 @@
 const mongoose = require("mongoose");
 const postScema = new mongoose.Schema(
   {
-    publisher: { type: mongoose.Types.ObjectId, ref: "Coordinators" , required: [true, 'Please add a publisher'] },
-    content: { type: String, require: [true, 'Please add content'] },
-    image: { type: String ,required: [true, 'Please add an image'] },
-
+    publisher: { type: mongoose.Types.ObjectId, ref: "Coordinators" },
+    content: { type: String },
+    image: { type: String },
   },
-  { timestamps: true,
-
-   }
+  {
+    timestamps: true,
+  }
 );
 
 const PostModel = mongoose.model("Posts", postScema);
