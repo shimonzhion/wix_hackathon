@@ -2,7 +2,7 @@ const GraduateModel = require("../models/graduate-model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const { getAll, getById, deleteOne, updateOne, create } = require("./main");
-const { validateGraduate } = require('../validation/graduate-valid');
+const { validateCordiantor } = require('../validation/coordinator-valid');
 
 //Generate JWT token
 const generateToken = (id) => {
@@ -15,7 +15,7 @@ const generateToken = (id) => {
       const { firstName, lastName, email, password, birthdate, service, CV, image, address, phone, classOf, userType } = req.body;
   
       // ביצוע וידוא של הנתונים באמצעות Joi
-      const { error } = validateGraduate(req.body);
+      const { error } = validateCordiantor(req.body);
       if (error) {
           return res.status(400).json({ message: error.details[0].message });
       }  

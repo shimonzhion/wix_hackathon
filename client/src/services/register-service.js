@@ -30,7 +30,7 @@ const graduateRegister = async (graduateData) => {
       const response = await axios.post('http://localhost:8090/api/coordinators/register', coordinatorData);
       return response.data;
     } catch (error) {
-     return error.response.data.message
+     return error.response.data
     //   throw error;
     }
   }
