@@ -1,14 +1,14 @@
 [
   {
-    "label": "Ads",
+    "label": "Center",
     "value": 32
   },
   {
-    "label": "Subscriptions",
+    "label": "North",
     "value": 45
   },
   {
-    "label": "Sponsorships",
+    "label": "South",
     "value": 23
   }
 ]
