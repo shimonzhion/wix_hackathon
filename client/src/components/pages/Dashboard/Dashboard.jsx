@@ -1,5 +1,4 @@
 import React from "react";
-import SideBar from "../../features/Sidebar";
 import Box from "@mui/material/Box";
 
 import ChartJs from "../../features/charts/ChartsJs";
@@ -7,7 +6,6 @@ import AppWidgetSummary from "../../features/AppWidgetSummary";
 function Dashboard() {
   return (
     <Box sx={{ display: "flex" }} className="w-80">
-      {/* <SideBar /> */}
       <Box component="main" sx={{ flexGrow: 1, p: 3, marginTop: "55px" }}>
         {/* section 1 - App Widget Summary */}
 
