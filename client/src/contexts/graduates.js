@@ -6,7 +6,7 @@ export const graduatesContext = createContext();
 function GraduatesProvider({ children }) {
   const [graduates, setGraduates] = useState([]);
   useEffect(() => {
-    getAllGraduates().then(res => setGraduates(res.data));
+    getAllGraduates().then(res => setGraduates(res.result));
   }, []);
   return (
     <graduatesContext.Provider value={{ graduates, setGraduates}}>
