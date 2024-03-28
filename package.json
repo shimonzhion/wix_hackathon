@@ -12,7 +12,7 @@
     "build": "npm i && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "DaliaZegaya <daliazegaya56@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -27,5 +27,6 @@
     "mongoose": "^8.2.3",
     "nodemon": "^3.1.0",
     "path": "^0.12.7"
-  }
+  },
+  "repository": "https://github.com/shimonzhion/wix_hackathon.git"
 }

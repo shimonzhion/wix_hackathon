@@ -1,14 +1,14 @@
 [
   {
-    "label": "Ads",
+    "label": "In employment",
     "value": 32
   },
   {
-    "label": "Subscriptions",
+    "label": "Not employed",
     "value": 45
   },
   {
-    "label": "Sponsorships",
+    "label": "In process",
     "value": 23
   }
 ]
