@@ -28,6 +28,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import Avatar from "../features/Avater"
+import Button from '@mui/material/Button';
 
 
 const drawerWidth = 240;
@@ -136,6 +137,8 @@ export default function SideBar() {
           <span>  <Avatar/></span>
             </div>
           </Typography>
+          <Button variant="contained" onClick={()=>navigate('/signIn')} >login</Button>
+          <Button variant="contained" onClick={()=>navigate('/signUp')}>register</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} >
