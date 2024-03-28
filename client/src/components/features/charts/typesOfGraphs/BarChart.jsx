@@ -9,10 +9,10 @@ import { graduatesContext } from "../../../../contexts/graduates";
 function BarChart() {
   const { graduates } = useContext(graduatesContext);
 
-  const inEmployment = graduates.filter(item => item.employmentStatus == 'Job seeker').length;
-  // console.log(inEmployment);
-  const notEmployed = graduates.filter(item => item.employmentStatus == 'notEmployed').length;
-  const inProcess = graduates.filter(item => item.employmentStatus == 'inProcess').length;
+  const inEmployment = graduates?.filter(item => item.employmentStatus == 'Job seeker').length;
+  console.log(inEmployment);
+  const notEmployed = graduates?.filter(item => item.employmentStatus == 'notEmployed').length;
+  const inProcess = graduates?.filter(item => item.employmentStatus == 'inProcess').length;
   const data = [inEmployment, notEmployed, inProcess];
 
   return (

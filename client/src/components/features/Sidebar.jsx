@@ -17,6 +17,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import Button from '@mui/material/Button';
+// import { useNavigate } from 'react-router-dom';
+
+
 
 import GroupIcon from '@mui/icons-material/Group';
 import WorkIcon from '@mui/icons-material/Work';
@@ -28,6 +32,10 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import Avatar from "../features/Avater"
+
+
+
+
 
 
 const drawerWidth = 240;
@@ -100,7 +108,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function SideBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
     const navigate=useNavigate();
 
   const handleDrawerOpen = () => {
@@ -129,13 +136,17 @@ export default function SideBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" className='w-100'>
+            
             <div className='d-flex align-items-center justify-content-between w-100'>
 
           Sharon University
           
-          <span>  <Avatar/></span>
-            </div>
+          <span>  <Avatar/> </span>
+
+              </div>
           </Typography>
+          <Button variant="contained" onClick={()=>navigate('/signIn')} >login</Button>
+          <Button variant="contained" onClick={()=>navigate('/signUp')}>register</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} >
