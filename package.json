@@ -11,7 +11,7 @@
     "build": "npm i && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "DaliaZegaya <daliazegaya56@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
