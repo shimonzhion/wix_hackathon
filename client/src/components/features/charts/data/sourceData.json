@@ -1,14 +1,14 @@
 [
   {
-    "label": "In employment",
+    "label": "Center",
     "value": 32
   },
   {
-    "label": "Not employed",
+    "label": "North",
     "value": 45
   },
   {
-    "label": "In process",
+    "label": "South",
     "value": 23
   }
 ]
