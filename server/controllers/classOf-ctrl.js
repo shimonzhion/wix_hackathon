@@ -1,4 +1,5 @@
 const ClassOfModel = require("../models/classOf");
+const { validateClassOf } = require("../validation/classOf-valid");
 const { getAll, getById, deleteOne, create, updateOne } = require("./main");
 
 const getClassesOf = (req, res) => {
@@ -9,10 +10,10 @@ const getClassOfById = (req, res) => {
   getById(req, res, ClassOfModel);
 };
 const addClassOf = (req, res) => {
-  create(req, res, ClassOfModel);
+  create(req, res, ClassOfModel, validateClassOf);
 };
 const updateClassOf = (req, res) => {
-  updateOne(req, res, ClassOfModel);
+  updateOne(req, res, ClassOfModel, validateClassOf);
 };
 const deleteClassOf = (req, res) => {
   deleteOne(req, res, ClassOfModel);

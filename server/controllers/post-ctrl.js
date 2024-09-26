@@ -1,4 +1,5 @@
 const PostModel = require("../models/post-model");
+const { validatePost } = require("../validation/post-valid");
 const { getAll, getById, deleteOne, create, updateOne } = require("./main");
 
 const getPosts = (req, res) => {
@@ -10,11 +11,11 @@ const getPostById = (req, res) => {
 };
 
 const addPost = (req, res) => {
-  create(req, res, PostModel);
+  create(req, res, PostModel, validatePost);
 };
 
 const updatePost = (req, res) => {
-  updateOne(req, res, PostModel);
+  updateOne(req, res, PostModel, validatePost);
 };
 
 const deletePost = (req, res) => {

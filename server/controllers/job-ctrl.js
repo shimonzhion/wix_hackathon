@@ -1,7 +1,6 @@
 const JobModel = require("../models/job-model");
+const { validateJob } = require("../validation/job-valid");
 const { getAll, getById, deleteOne, create, updateOne } = require("./main");
-
-
 
 const getJobs = (req, res) => {
   getAll(req, res, JobModel);
@@ -12,11 +11,11 @@ const getJobById = (req, res) => {
 };
 
 const addJob = (req, res) => {
-  create(req, res, JobModel);
+  create(req, res, JobModel, validateJob);
 };
 
 const updateJob = (req, res) => {
-  updateOne(req, res, JobModel);
+  updateOne(req, res, JobModel, validateJob);
 };
 
 const deleteJob = (req, res) => {

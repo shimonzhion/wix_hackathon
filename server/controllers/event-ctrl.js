@@ -1,4 +1,5 @@
 const EventModel = require("../models/event-model");
+const { validateEvent } = require("../validation/event-valid");
 const {getAll, getById, create,deleteOne,updateOne}= require("./main");
 
 const getEvents = (req, res) => {
@@ -8,10 +9,10 @@ const getEventsById = (req, res) => {
     getById(req, res, EventModel);
 }
 const addEvent = (req, res) => {
-    create(req, res, EventModel);
+    create(req, res, EventModel, validateEvent);
 }
 const updateEvent = (req, res) => {
-    updateOne(req, res, EventModel);
+    updateOne(req, res, EventModel, validateEvent);
 }
 const deleteEvent = (req, res) => {
     deleteOne(req, res, EventModel);

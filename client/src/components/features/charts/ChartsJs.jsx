@@ -22,12 +22,12 @@ function ChartsJs() {
   });
 
   const areaCounts = {};
-  chartLocation.forEach((area) => {
-    if (!areaCounts[area]) {
-      areaCounts[area] = 0;
-    }
-    areaCounts[area]++;
-  });
+  // chartLocation.forEach((area) => {
+  //   if (!areaCounts[area]) {
+  //     areaCounts[area] = 0;
+  //   }
+  //   areaCounts[area]++;
+  // });
 
   return (
     <div className="BarChart ChartsJsBox d-flex">
